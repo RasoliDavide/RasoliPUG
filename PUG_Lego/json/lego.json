@@ -3,11 +3,33 @@
     [
         {
             "Nome" : "LEGO The Chamber of Secrets",
-            "Set Number" : 4730,
-            "Set Theme" : "Harry Potter",
-            "Set Name" : "The Chamber of Secrets",
-            "Year": 2002
-
+            "SetNumber" : 4730,
+            "SetTheme" : "Harry Potter",
+            "SetName" : "The Chamber of Secrets",
+            "Year": 2002,
+            "Link" : "https://letsbuilditagain.com/free-lego-instructions.php?q=4730",
+            "ImageSRC" : "lego1.jpg",
+            "maxInstructionImage": 72
+        },
+        {
+            "Nome" : "LEGO 0348 Car and Truck Set",
+            "SetNumber": "0348",
+            "SetTheme": "System Town",
+            "SetName": "Car and Truck Set",
+            "Year": 1971,
+            "Link" : "https://letsbuilditagain.com/free-lego-instructions.php?q=0348",
+            "ImageSRC" : "lego2.jpg",
+            "maxInstructionImage": 6
+        },
+        {
+            "Nome" : "LEGO 8376 Hot Flame Racer",
+            "SetNumber" : 8376,
+            "SetTheme" : "Radio Controlled - RC Racers",
+            "SetName" : "Hot Flame Racer",
+            "Year": 2003,
+            "Link" : "https://letsbuilditagain.com/free-lego-instructions.php?q=8376",
+            "ImageSRC" : "lego3.jpg",
+            "maxInstructionImage": 84
         }
     ]
 }
