@@ -20,7 +20,7 @@ app.get('/', function(req, res)
 });
 
 app.get('/lego', function(req, res){
-    const mods = legoj.lego.find(l => l.SetNumber === req.query.n);
+    const mods = legoj.lego.find(l => l.SetNumber === req.query.id);
     console.log(mods);
     res.render('instruction', {mod : mods});
 });
