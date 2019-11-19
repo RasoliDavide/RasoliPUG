@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
-const legoj = require('./json/lego.json');
+
 
 
 
 app.use(express.static(__dirname + '/public')); 
+const legoj = require('./public/json/lego.json');
 app.set('view engine', 'pug'); 
 
 
@@ -23,4 +24,9 @@ app.get('/lego', function(req, res){
     const mods = legoj.lego.find(l => l.SetNumber === req.query.id);
     console.log(mods);
     res.render('instruction', {mod : mods});
+});
+
+app.get('/api', function(req, res){
+   
+   res.sendFile('./public/json/lego.json');
 });
