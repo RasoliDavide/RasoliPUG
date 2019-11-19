@@ -1,0 +1,32 @@
+html
+    head
+        title Istruzioni per #{mod.Nome}
+        link(rel='stylesheet', href='/css/instruction.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    body
+        h1.testoCentrato #{mod.Nome}
+        div.row.col-sm-12
+            div.col-sm-5
+                img.col-sm-11.immagine(src = `./images/${mod.ImageSRC}`)
+                div.divDesc
+                    h5.descrizioni Nome: #{mod.SetName}
+                    h5.descrizioni Categoria: #{mod.SetTheme}
+                    h5.descrizioni Numero: #{mod.SetNumber}
+                    h5.descrizioni Anno: #{mod.Year}
+                    h5.descrizioni Prezzo: #{mod.Prezzo}€
+            div.col-sm-1
+            div.col-sm-6
+                - var n = 1
+                while n <= mod.maxInstructionImage 
+                    if n < 10
+                        img.imm(src=`https://letsbuilditagain.com/instructions/${mod.SetNumber}/00${n}.jpg`)
+                        - n++
+                    else if n < 100
+                        img.imm(src=`https://letsbuilditagain.com/instructions/${mod.SetNumber}/0${n}.jpg`)
+                        - n++
+                    else if n < 1000
+                        img.imm(src=`https://letsbuilditagain.com/instructions/${mod.SetNumber}/${n}.jpg`)
+                        - n++

@@ -1,0 +1,18 @@
+html
+    head
+        title Lista di lego
+        link(rel='stylesheet', href='/css/index.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    body
+        h1.testoCentrato Scegli il tuo lego
+        div.row.col-sm-12.center
+            each lego in legos
+                div.col-sm-3.d-inline-block
+                    a(href=`./lego?id=${lego.SetNumber}`) 
+                        img(src=`./images/${lego.ImageSRC}` style="width: 100%; heigth: 200px")
+                        p #{lego.Nome}
+                div.col-sm-1.d-inline-block
+                
