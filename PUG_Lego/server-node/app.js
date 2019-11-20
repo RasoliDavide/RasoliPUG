@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
 
-
-
-
+var path = require('path');
+var cors = require('cors');
+app.use(cors());
 app.use(express.static(__dirname + '/public')); 
 const legoj = require('./public/json/lego.json');
 app.set('view engine', 'pug'); 
@@ -28,5 +28,5 @@ app.get('/lego', function(req, res){
 
 app.get('/api', function(req, res){
    
-   res.sendFile('./public/json/lego.json');
+   res.sendFile(path.join(__dirname + '/public/json/lego.json'));
 });

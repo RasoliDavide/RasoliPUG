@@ -11,6 +11,6 @@ export class AppComponent {
   lego : Lego[];
   constructor(http : HttpClient)
   {
-    http.get<Lego[]>("localhost:3000/api").subscribe(d => {this.lego});
+    http.get<Lego[]>("http://localhost:3000/api").subscribe(d => {this.lego = d['lego'];});
   }
 }
