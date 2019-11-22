@@ -27,6 +27,11 @@ app.get('/lego', function(req, res){
 });
 
 app.get('/api', function(req, res){
-   
-   res.sendFile(path.join(__dirname + '/public/json/lego.json'));
+    if(req.query.id == null)
+        res.sendFile(path.join(__dirname + '/public/json/lego.json'));
+    else
+    {
+        const mods = legoj.lego.find(l => l.SetNumber === req.query.id);
+        res.send(JSON.stringify(mods));
+    }
 });
